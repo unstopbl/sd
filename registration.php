@@ -14,11 +14,11 @@ include "DB.php";
 <link href="RegPageStyle.css" rel="">
 </head>
 <body>
-<form method="post" action="index.php">
+<form method="post" action="SaveUser.php">
     Login: <input id="login" type="text" name="login"/> <br/>
     Password: <input id="pass" type="password" name="password"/> <br/>
     Verification: <input id="ver_pass" type="password" name="VerifPass"/> <br/>
-    Email: <input id="mail" type="text" name="mail"/> <br/>
+    Email: <input id="mail" type="text" name="email"/> <br/>
     <input type="submit" name="Поiхали" value="Поiхали">
 </form>
 </body>

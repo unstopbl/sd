@@ -1,5 +1,5 @@
 <?php
 include "DB.php";
 
-echo ""
+echo "govno iz zheppi"
 ?>

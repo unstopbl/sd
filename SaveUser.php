@@ -26,19 +26,14 @@ if (empty($login) or empty($password)) {
     exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
 }
 
-if ($email != '*@nefco.ru') {
-    echo "сьебался, псина неместная";
-
-}
-$stmt = $dbh->prepare("INSERT INTO sd.user (login, password, email) VALUES (:log, :pass, :email)");
+$stmt = $dbh->prepare("INSERT INTO profile (login, password, email) VALUES (':log', ':pass', ':email')");
 $stmt->bindParam(':log', $login);
 $stmt->bindParam(':pass', $password);
 $stmt->bindParam(':email', $email);
 $stmt->execute();
+var_dump($dbh->errorInfo());
 
 
 $sth = null;
-$dbh = null;
 
-?>
 
